@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cp -rf *.* "/var/lib/jenkins/workspace/github_Sgl_pg_website/Animated Landing Page Website Template" /usr/share/nginx/html'
+                sh 'cp -rf *.* /var/lib/jenkins/workspace/github_Sgl_pg_website_pipeline/Animated Landing Page Website Template /usr/share/nginx/html"
             }
         }
         stage('Deployed') {
