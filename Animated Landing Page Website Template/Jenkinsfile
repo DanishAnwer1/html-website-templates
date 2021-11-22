@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'touch test_file'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'cp test_file /opt/'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deployment '
+            }
+        }
+    }
+}
+
