@@ -1,7 +1,15 @@
 pipeline {
     agent any
 
-    stages {
+    stages 
+    {
+        stage('removing previous build') {
+            steps {
+                sh '''cd /var/lib/jenkins/workspace/github_Sgl_pg_website_pipeline/ 
+                    rm -rf *'''
+            }
+        }
+    {
         stage('copy fromgit') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/html-website-templates.git'
